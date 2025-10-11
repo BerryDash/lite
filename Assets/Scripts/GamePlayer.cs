@@ -32,7 +32,6 @@ public class GamePlayer : MonoBehaviour
     public TMP_Text boostText;
     public GameObject bird;
     public GameObject pausePanel;
-    public GameObject statsPanel;
     public Rigidbody2D rb;
     public AudioSource backgroundMusic;
     private float lastMoveTime;
@@ -591,7 +590,11 @@ public class GamePlayer : MonoBehaviour
 
     internal void TogglePause()
     {
-        if (statsPanel.activeSelf) return;
+        if (GamePlayerPauseMenu.Instance != null && GamePlayerPauseMenu.Instance.statsMenu.activeSelf)
+        {
+            GamePlayerPauseMenu.Instance.statsMenuExitButton.onClick.Invoke();
+            return;
+        }
         if (pausePanel.activeSelf)
         {
             DisablePause();

@@ -2431,7 +2431,6 @@ MonoBehaviour:
   boostText: {fileID: 497996347}
   bird: {fileID: 808236448}
   pausePanel: {fileID: 302151016}
-  statsPanel: {fileID: 1140906499}
   rb: {fileID: 808236449}
   backgroundMusic: {fileID: 1625416039}
   berryParent: {fileID: 157908646}
